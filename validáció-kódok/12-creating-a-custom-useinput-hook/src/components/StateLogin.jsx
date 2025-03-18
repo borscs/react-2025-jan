@@ -3,12 +3,14 @@ import { isEmail, isNotEmpty, hasMinLength } from '../util/validation.js';
 import { useInput } from '../hooks/useInput.js';
 
 export default function Login() {
+  
   const {
     value: emailValue,
     handleInputChange: handleEmailChange,
     handleInputBlur: handleEmailBlur,
     hasError: emailHasError,
   } = useInput('', (value) => isEmail(value) && isNotEmpty(value));
+  
   const {
     value: passwordValue,
     handleInputChange: handlePasswordChange,
